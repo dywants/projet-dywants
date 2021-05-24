@@ -1,0 +1,170 @@
+footer {
+  background: $dark;
+  position: relative;
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    >div {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: $primary-color;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      color: $light;
+    }
+
+    .link__contact__me {
+      .links__contact {
+        text-align: left;
+
+        li {
+          padding: .6rem;
+
+          a {
+            font: italic 400 1.2rem/1rem var(--font-secondary);
+
+            span {
+              font-size: inherit;
+              font-weight: inherit;
+              color: $light;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    .footer__newsletter {
+      .form-element {
+        @include form__news__search;
+      }
+    }
+
+    .instagram div>img {
+      display: inline-block;
+      width: 25%;
+      height: 50%;
+      margin: .3rem .4rem;
+    }
+  }
+
+  .follow div i {
+    color: $light;
+    padding: 1rem 0.4rem 1rem 0;
+  }
+
+  .right {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secondary);
+    background: $footer_two_color;
+
+    h4,
+    a {
+      color: $light;
+    }
+  }
+
+  .move-up {
+    position: absolute;
+    right: 3%;
+    top: 65%;
+
+     span {
+       color: $primary-color;
+
+       &:hover {
+         color: $secondary-color;
+         cursor: pointer
+       }
+     }
+
+  }
+}
+
+//scroll top button
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: $primary-color;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: .3rem;
+  color: $light;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Media querry
+@include lg {
+  footer {
+    .footer__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .follow {
+      width: 60%;
+    }
+
+    .move-up {
+      position: absolute;
+      right: 7%;
+      top: 75%;
+    }
+  }
+}
+
+@include sm {
+  footer {
+    .footer__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include sm-1 {
+  footer {
+    .right {
+      height: auto;
+      text-align: center;
+
+      h4,
+      a {
+        width: 80%;
+      }
+    }
+  }
+}

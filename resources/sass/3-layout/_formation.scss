@@ -1,0 +1,418 @@
+.header__forma__content{
+	display: flex;
+	position: relative;
+	z-index: 2;
+	//margin-top: -1rem;
+	//padding: 3rem 0;
+	//height: 300px;
+	top: 0;
+
+	&__info{
+		max-width:35rem;
+		padding-right: 1.2rem;
+	}
+
+	&__video{
+		width: 65rem;
+		//padding-top: 2rem;
+
+		.miniature__video{
+			background: #121517;
+			border: 1px solid #454545;
+			box-sizing: border-box;
+			border-radius: 8px;
+			width: 100%;
+		}
+	}
+
+	.header__player {
+		position: absolute;
+		top:53.5%;
+		left:71.5%;
+		transform: translate(-50%, -50%);
+
+		.play__button {
+			display: flex;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+			background: $primary-color;
+			border-radius: 50%;
+			animation: pulse 2s infinite;
+			cursor: pointer;
+			outline: none;
+			text-align: center;
+
+			button {
+				border: none;
+				background: transparent;
+				cursor: pointer;
+				outline: none;
+				z-index: 200;
+				width: 100%;
+
+				&:focus{
+					box-shadow: none;
+				}
+			}
+		}
+
+		.play__button img {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 1rem;
+			margin-left: .8rem;
+			cursor: pointer;
+		}
+
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 0 0 0px $primary-color;
+			}
+
+			100% {
+				box-shadow: 0 0 0 15px rgba($primary-color, 0);
+			}
+		}
+	}
+}
+
+.video__modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(2px);
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s;
+
+	iframe{
+		position: relative;
+		width: 900px;
+		height: 600px;
+		outline: none;
+	}
+}
+
+.is-player {
+	visibility: visible;
+	opacity: 1;
+}
+
+.open__sommaire{
+	position: absolute;
+	background-color: $dark!important;
+	border: none;
+	border-radius: 0;
+	pointer-events: auto;
+	padding: 8px 1rem;
+	margin-top: 16px;
+	height: 50px;
+	width: 50px;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	transition: width .5s ease-in;
+
+	i{
+		color: $primary-color;
+	}
+
+	.courser__content{
+		clip: rect(0,0,0,0);
+		margin-left:.8rem;
+		color: $light;
+		font-size: 1.1rem;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.2s, visibility 0.5s;
+	}
+
+	&:hover{
+		width: 10rem;
+		background-color: rgba(41,48,59,.7)!important;
+
+		.courser__content{
+			color: $light;
+			padding: 8px 0;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+.header__nav__formation {
+	border-bottom: 3px solid $border;
+	background-color: $background2;
+	position: relative;
+
+	.tabs {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.row__area {
+		a:focus{
+			outline: none;
+		}
+		.nav__tab {
+			position: relative;
+			height: 50px;
+			width: auto;
+			padding: 15px;
+			line-height: 18px;
+			font-size: 1.2rem;
+			margin-bottom: -3px !important;
+			font-weight: 700;
+			color: var(--text-color);
+			margin-left: -1px;
+			border-right: 1px solid $border;
+			border-left: 1px solid $border;
+			//box-shadow: $box-shadow6;
+
+			&:hover,
+			&:focus{
+				border-bottom: 3px solid $border;
+				border-bottom-color: $primary-color;
+				box-shadow: $box-shadow7;
+
+				i {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.nav__tab__right {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			width: auto;
+
+			.right {
+				padding-right: 45px;
+			}
+
+			.vcenter {
+				display: block;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		em {
+			display: block;
+			font: normal 100 .9rem/1.2rem var(--font-secondary);
+			color: $gray;
+		}
+
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			color: $gray;
+			transform: translateY(-50%);
+		}
+
+		.icon__right {
+			left: auto;
+			right: 10px
+		}
+
+		.tab-icon {
+			padding-left: 45px;
+		}
+	}
+
+	.text__formation {
+		display: flex;
+		align-items: center;
+	}
+
+}
+
+.sidebar__menu__formation {
+	width: 100%;
+	height: auto;
+	transition: all .5s ease-in-out;
+	z-index: 9999;
+	box-shadow: $box-shadow-card2;
+	animation: show 2s ease-in;
+	margin-top: .6rem;
+
+	header {
+		font-size: 22px;
+		color: $light;
+		text-align: center;
+		line-height: 70px;
+		user-select: none;
+		background: $dark;
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+}
+
+// .show {
+// 	display: block;
+// 	opacity: 1;
+// }
+
+.hideSide {
+	display: none;
+}
+
+.info__formation {
+	transition: all 1s ease-in-out;
+}
+
+// Menu accordeon sommaire
+.tabs__sommaire {
+
+	.tab__content__sommaire {
+
+		&__header {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			padding: 16px;
+			background-color: rgba($dark, .8);
+			color: $light;
+
+			.icon {
+				color: $light;
+
+				.fa-minus-circle {
+					display: none;
+				}
+			}
+
+			.title {
+				color: inherit;
+			}
+		}
+
+		.open {
+			.icon {
+				.fa-minus-circle {
+					display: block;
+				}
+
+				.fa-plus-circle {
+					display: none;
+				}
+			}
+		}
+
+		&__items {
+			margin: 0;
+			padding: 0;
+			background-color: $light;
+			border-right: 1px solid $border;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-in-out;
+			border-bottom: 1px solid $gray;
+
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 1rem;
+
+				.link__title {
+					display: flex;
+					align-items: center;
+
+					.icon {
+						.fa-check {
+							display: none;
+						}
+					}
+
+					.title {
+						padding-left: .6rem;
+					}
+				}
+
+				.valided {
+					.icon {
+						color: green;
+
+						.fa-dot-circle {
+							display: none;
+						}
+
+						.fa-check {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Media querry
+@include lg {
+
+	inner{
+		margin: 0 auto;
+	}
+	.header__forma__content {
+		flex-wrap: wrap;
+		justify-content: center;
+
+
+		&__info{
+			width: 100%;
+
+			.title{
+				font-size: 2rem!important;
+				padding: 0;
+				width: 400px;
+			}
+
+			.title__article{
+				padding-bottom: 5px!important;
+			}
+		}
+
+		&__video{
+			width: 500px;
+		}
+
+		.header__player{
+			top: 70%;
+			left: 50%;
+		}
+	}
+}

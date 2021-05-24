@@ -1,0 +1,6 @@
+.text__price {
+	.btn__paypal {
+		@include btn;
+		padding: 1rem;
+	}
+}

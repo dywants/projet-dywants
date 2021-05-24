@@ -1,0 +1,19 @@
+.code-snippet {
+  max-width: 500px;
+  background-color: $dark;
+  border-radius: 5px;
+  margin: 1rem auto;
+
+  code {
+    background-color: transparent !important;
+    line-height: 1.45;
+    display: block;
+    padding: 1rem;
+    overflow-x: auto;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
+  }
+}
+
+.language-css {
+  border-left: 1rem solid #008cba;
+}

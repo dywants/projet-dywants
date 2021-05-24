@@ -1,0 +1,41 @@
+.header__title {
+	min-height: 300px;
+	background-color: $dark;
+	color: #fff;
+	clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+	box-shadow: 0 5px 5px $gray;
+
+	&__content {
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		&__hero {
+			display: flex;
+			align-items: center;
+			padding-top: 3rem;
+
+			h1 {
+				padding-bottom: 0;
+				color: $light;
+			}
+
+
+			img {
+				max-height: 70px;
+				width: 70px;
+				margin-right: 1rem;
+			}
+
+			.header__image {
+				max-width: 100%;
+				height: auto;
+			}
+
+		}
+
+		.cat__outil {
+			margin-left: 4rem;
+			padding: 1rem 1.25rem;
+		}
+	}
+}

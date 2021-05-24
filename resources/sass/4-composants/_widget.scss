@@ -1,0 +1,192 @@
+.sidebar__widget {
+  border: 1px solid $border;
+  padding: 1rem;
+  border-radius: .3rem;
+  position: relative;
+  margin-bottom: 1rem;
+  //background-color: #f3f4f7;
+
+  img{
+    border-radius: .3rem;
+  }
+
+  .widget__btn{
+    position: absolute;
+    top: 280px;
+    left: 0;
+  }
+
+  .widget__image{
+    display: block;
+    background-position: bottom ;
+    background-size: 250px;
+    transition: .3s;
+    text-align: left;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin-bottom: .8rem;
+    position: relative;
+  }
+
+  &__category{
+    color: var(--text-color);
+  }
+
+  &__content{
+    color: #6f6f6f;
+    margin-bottom: 100px;
+    line-height: 1.5;
+  }
+
+  .widget__btn{
+    text-align: left;
+  }
+}
+
+.widget__guide{
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.wid-mb{
+  margin: 0;
+  padding: 0;
+}
+
+//Button pour tout widget de guide (exemple guide de creation d'un site avec wordpress
+.btn__guide{
+  position: absolute;
+  top: 171px;
+  left: 10px;
+}
+
+// Widget guides pratiques
+.widget__ressources {
+  text-align: left;
+  padding: 0 1.7rem;
+  border: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  &__title{
+    padding-top: -1rem !important;
+  }
+
+  .widget__ress_ligne {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .widget__box {
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+
+      h4 {
+        padding: 0;
+      }
+
+      i{
+        font-size: 1.3rem;
+      }
+    }
+
+    .first i {
+      color: map-get($color__icon_widget, conding);
+    }
+
+    .second i {
+      color: map-get($color__icon_widget, wordpress);
+    }
+
+    .three i {
+      color: map-get($color__icon_widget, security);
+    }
+
+    .four i {
+      color: map-get($color__icon_widget, performance);
+    }
+
+    .five i {
+      color: map-get($color__icon_widget, ecommerce);
+    }
+
+    .six i {
+      color: map-get($color__icon_widget, toolk);
+    }
+  }
+}
+
+// Widget learning sur la page formation
+.widget__learning{
+  background-color: var(--border__three);
+  padding: 10px 15px;
+  margin-bottom: .625rem;
+  box-shadow: $box-shadow5;
+  border-radius: .3rem;
+
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+
+  &__header{
+    background: transparent none;
+    padding: 0;
+    margin-bottom: .625rem;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+
+    &__item{
+      padding: 0;
+      background-color: $background2;
+      margin-bottom: .625rem;
+      border-left: 5px solid $primary-color;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      border-right: 1px solid $border;
+      border-radius: .3rem;
+
+      &:hover{
+        box-shadow: $box-shadow5;
+      }
+
+      &>i{
+        padding-right: .5rem;
+        font-size: 1.4rem;
+        color: $primary-color;
+      }
+
+      &__link{
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+        padding: 10px 45px 10px 15px;
+      }
+    }
+  }
+}
+
+// Media querry
+@include md {
+  .widget__ressources {
+    width:60%;
+    margin: 0 auto;
+  }
+}
+
+

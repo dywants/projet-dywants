@@ -1,0 +1,103 @@
+.confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($dark, 0.6);
+  padding: 10px;
+  opacity: 0;
+  animation-name: confirm---open;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+
+  .confirm__window {
+    width: 100%;
+    max-width: 600px;
+    background: $light;
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: $box-shadow-card;
+    opacity: 0;
+    transform: scale(0.75);
+    //Animation windows
+    animation-name: confirm__window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+
+    .confirm__titlebar,
+    .confirm__content,
+    .confirm__buttons {
+      padding: 1.25rem;
+    }
+
+    .confirm__titlebar {
+      background: $dark;
+      color: $light!important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .confirm__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: inherit;
+      }
+
+      .confirm__close {
+        background: none;
+        outline: none;
+        border: none;
+        transform: scale(2.5);
+        color: $light;
+        transition: color 0.15s;
+        //animation-name: confirm---close;
+
+        &:hover{
+          color: var(--text-error);
+          cursor: pointer;
+        }
+      }
+    }
+    .confirm__content {
+      line-height: 1.8rem;
+    }
+
+    .confirm__buttons {
+      background: rgba($gray, .6);
+      display: flex;
+      justify-content: flex-end;
+
+      .confirm__button--fill {
+        margin-right: .3rem;
+      }
+    }
+  }
+}
+
+.confirm--close {
+  animation-name: confirm---close;
+}
+
+@keyframes confirm---open {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes confirm---close {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+@keyframes confirm__window---open {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

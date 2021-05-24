@@ -1,0 +1,35 @@
+.feedback{
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin: .8rem 0 20px;
+  position: relative;
+  overflow: auto;
+  color: var(--text-color);
+  font: normal 300 1rem/1.1rem var(--font-secondary);
+  font-weight: 300;
+  background: var(--border__three) !important;
+  border: none !important;
+  border-radius: .3em;
+
+  feedcenter{
+    margin-top: 0;
+    padding-left: 0;
+    text-align: left !important;
+  }
+
+  &__text{
+    font-size: 1em;
+    margin: 10px 10px 10px 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__good{
+      margin-right: .6rem;
+    }
+  }
+}

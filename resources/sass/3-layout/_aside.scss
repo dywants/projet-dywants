@@ -1,0 +1,82 @@
+//Search section
+.sidebar {
+  >div {
+    border-radius: .3rem;
+  }
+}
+
+.form {
+  padding: 1rem 0;
+  border: 1px solid $border;
+  border-radius: 1rem;
+  width: 310.56px;
+  // @include search_form;
+}
+
+// widget recent tutoriel
+.recent__tutoriels {
+  margin-top: 20px;
+  text-align: left;
+  padding: 1rem 1.7rem;
+  position: relative;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  &::before {
+    content: '👌';
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    right: -.9rem;
+    border-radius: 50%;
+    background-color: $dark;
+    align-items: center;
+    top: -1rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .recent__items {
+    margin: 0;
+    padding: 0;
+
+    .recent__item {
+      width: 100%;
+      line-height: 1.5;
+      font-size: 1rem;
+      margin: 5px 0;
+      background-color: $light;
+
+
+      &:hover {
+        transform: scale(1.15);
+      }
+
+      a {
+        display: block;
+        padding: 9px;
+
+        h4 {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+// Media querry
+@include sm-1 {
+  .sidebar {
+    width: 90%;
+  }
+
+  .form {
+    width: 210.56px;
+  }
+
+}

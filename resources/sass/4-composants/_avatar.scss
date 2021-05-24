@@ -1,0 +1,100 @@
+//Avatar global
+.avatar{
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus{
+    transform: scale(1.2);
+  }
+}
+
+.avat-pt{
+  padding-top: .3rem;
+}
+
+.avatar__image {
+  border: 2px solid transparent;
+  border-bottom-color: $primary-color;
+  border-top-color: $primary-color;
+  border-radius: 55px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: .6rem;
+}
+
+//Avatar navigation
+.btn__avatar {
+  background: transparent;
+  height: 55px;
+  width: 55px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+
+  &:focus+div {
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+//Avatar profile
+.figure{
+  position: relative;
+  display: block;
+
+  .avatar__profil{
+    width: 84px;
+    border-radius: 6px;
+    border: 1px solid $border;
+  }
+
+  .camera-icon{
+    width: 40px;
+    position: absolute;
+    top: 25%;
+    left: 1px;
+    transform: translateX(50%);
+    transition: filter .9s ease-in-out;
+    filter:invert(60%);
+    cursor: pointer;
+
+    &:hover{
+      filter:invert(100%) drop-shadow(10px 10px 22px $primary-color) !important;
+    }
+  }
+}
+
+.file__uploader{
+  position: absolute;
+  top: 10%;
+  left: -18px;
+  transform: translateX(100%);
+  opacity: 0;
+
+  &::-webkit-file-upload-button{
+    visibility: hidden;
+  }
+
+  &:before{
+    position:relative;
+    top: 0;
+    left: 15px;
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 200;
+  }
+}

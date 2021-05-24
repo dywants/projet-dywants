@@ -1,0 +1,37 @@
+.fil__ariane {
+  margin: 0;
+}
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+
+  li {
+    display: inline !important;
+
+    i {
+      color: $dark;
+      padding-right: 10px;
+      font-size: .8rem;
+    }
+
+    a {
+      color: $secondary-color;
+      font-size: .8rem;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: $dark;
+  content: "/\00a0";
+  font-size: .8rem;
+}

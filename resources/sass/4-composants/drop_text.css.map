@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;;;;mCAOmC;AAEnC,AAAA,KAAK,CAAC;EACJ,gBAAgB,CAAA,EAAC;CAClB;;AAED,AAAA,SAAS,AAAA,cAAc,CAAC;EACtB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,CAAC;EACd,SAAS,EAAE,2DAA2D;EACtE,OAAO,EAAE,aAAa;EACtB,cAAc,EAAE,SAAS;EACzB,KAAK,EAAE,4BAA4B;CACpC;;AAED,AAAA,eAAe,CAAC,SAAS,AAAA,cAAc,CAAC;EACtC,SAAS,EAAE,2FAA2F;CACvG",
+    "sources": [
+        "drop_text.scss"
+    ],
+    "names": [],
+    "file": "drop_text.css"
+}

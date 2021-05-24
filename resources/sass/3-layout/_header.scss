@@ -1,0 +1,116 @@
+/*Hero*/
+.header__banner {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 40vh;
+  align-items: center;
+
+  .banner__text {
+    flex: 1;
+    z-index: 10;
+
+    h1 {
+      color: $light;
+      line-height: normal;
+      box-shadow: $box-shadow;
+      padding: 1rem;
+      border-bottom-left-radius: 3rem;
+      font-weight: 300;
+    }
+  }
+
+  .cover {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    flex: 1;
+    filter: drop-shadow(0px 5px 3px $dark);
+  }
+}
+
+.header__other {
+  background: $dark;
+}
+
+// Media querry
+@include lg {
+  .header__banner {
+
+    .banner__text {
+      width: 350px;
+      order: 2;
+      margin: 0 auto 1.5rem;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+
+    .cover {
+      width: 80%;
+      order: 1;
+
+      svg {
+        width: 350px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@include sm {
+  .header__banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .banner__text {
+      width: 330px;
+      order: 2;
+      margin: 0 auto 1.3rem;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+
+    .cover {
+      width: 70%;
+      order: 1;
+
+      svg {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@include sm-1 {
+  .header__banner {
+    .banner__text {
+      width: 250px;
+
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+    }
+
+    .cover {
+      width: 65%;
+      order: 1;
+
+      svg {
+        width: 260px;
+        height: 250px;
+      }
+    }
+  }
+}

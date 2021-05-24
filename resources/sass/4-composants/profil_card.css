@@ -1,0 +1,103 @@
+:root {
+  --author-img-size: 4em;
+}
+
+.author {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: var(--author-img-size) 1fr;
+      grid-template-columns: var(--author-img-size) 1fr;
+  grid-gap: var(--space-sm);
+}
+
+.author__img-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  width: var(--author-img-size);
+  height: var(--author-img-size);
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.2s var(--bounce);
+  transition: -webkit-transform 0.2s var(--bounce);
+  transition: transform 0.2s var(--bounce);
+  transition: transform 0.2s var(--bounce), -webkit-transform 0.2s var(--bounce);
+}
+
+.author__img-wrapper:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.author__img-wrapper img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.author__content a {
+  color: inherit;
+}
+
+.author__content a:hover {
+  color: var(--color-primary);
+}
+
+.author--meta {
+  --author-img-size: 3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: var(--space-xs);
+}
+
+.author--minimal {
+  --author-img-size: 2.4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: var(--space-xxs);
+}
+
+.author--featured {
+  --author-img-size: 6em;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.author--featured .author__img-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author__social {
+  display: inline-block;
+  padding: var(--space-xs);
+  background: var(--color-contrast-lower);
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.author__social .icon {
+  display: block;
+  font-size: 16px;
+  color: var(--color-contrast-high);
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.author__social:hover {
+  background-color: var(--color-bg);
+  -webkit-box-shadow: var(--shadow-sm);
+          box-shadow: var(--shadow-sm);
+}
+
+.author__social:hover .icon {
+  color: var(--color-primary);
+}
+/*# sourceMappingURL=profil_card.css.map */
